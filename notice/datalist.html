@@ -1,0 +1,33 @@
+<html>
+    <style>
+        #details[open] {
+            background-color: #cdedfd;
+            background-image: linear-gradient(
+                319deg,
+                #cdedfd 0%,
+                #ffec82 38%,
+                #ffcfd2 100%
+            );
+        }
+    </style>
+
+    <progress id="progress" value="51" min="0" max="100"></progress>
+    <meter min="0" max="100" low="20" high="65" optimum="15" value="51"></meter>
+
+    <details id="details">
+        <summary>how are you?</summary>
+        <span>i' a'm fine, thx you</span>
+    </details>
+
+    <input type="date">
+    <input type="month">
+    <input type="time">
+   
+    <label for="aa">what is your name?</label>
+    <input type="text" list="name-options"/>
+    <datalist id="name-options">
+        <option>hongdeok</option>
+        <option>jeongkyu</option>
+        <option>hyeok</option>
+    </datalist>
+</html>
