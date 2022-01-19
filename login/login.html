@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputId" class="sr-only">ID</label>
+        <input type="email" id="inputId" class="form-control" placeholder="ID" required autofocus>
+        <label for="inputPw" class="sr-only">Password</label>
+        <input type="password" id="inputPw" class="form-control" placeholder="Password" required>
+        <div class="checkbox">
+            <label>
+            <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button id="oSignIn" class="btn btn-lg btn-primary btn-block" type="button">Sign in</button>
+        <button id="oSignUp" class="btn btn-lg btn-info btn-block" type="button">Sign up</button>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = () => {
+            document.querySelector('#oSignIn').addEventListener('click', (e) => {
+                let oInputId = document.querySelector('#inputId');
+                let oInputPw = document.querySelector('#inputPw');
+
+                if (!oInputId.value) {
+                    alert('아이디 입력해주셈');
+                    e.preventDefault();
+                    return;
+                }
+
+                if (!oInputPw.value) {
+                    alert('비밀번호 입력해주셈');
+                    e.preventDefault();
+                    return;
+                }
+
+                location.href = '/notice/datalist.html';
+            });
+
+            document.querySelector('#oSignUp').addEventListener('click', function() {
+                location.href = '/join/join.html';
+                event.preventDefault();
+                return;
+            });
+        }
+    </script>
+</body>
+</html>
